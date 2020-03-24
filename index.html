@@ -48,11 +48,11 @@
       <textarea id="faucet" placeholder="please enter faucet"></textarea>
     </div>
     <div>
-      <button type="button" class="btn btn-warning">Generate</button>
+      <button type="button" class="btn btn-warning" onclick="restoreAccount()">
+        Generate
+      </button>
     </div>
-    <section id="keys">
-      hello
-    </section>
+    <section id="keys"></section>
   </body>
   <script src="./eztz.min.js"></script>
   <script>
@@ -65,11 +65,9 @@
       this.keys = eztz.crypto.generateKeys(account.mnenomics, this.cred);
 
       this.account = this.keys.pkh;
-      document.getElementById("keys").innerText = this.account;
-      this.allKeys = eztz.crypto.generateKeys(
-        account.mnemonic,
-        this.keys.passphrase
-      );
+      document.getElementById("keys").innerHTML = `<code>${JSON.stringify(
+        this.keys
+      )}</code>`;
       return true;
     }
   </script>

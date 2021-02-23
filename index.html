@@ -1,266 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amiri|Raleway&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Amiri", serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
 
-    .faucet-container {
-      margin: 20px !important;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Raleway&display=swap" rel="stylesheet" />
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: "Amiri", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-    code {
-      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-    }
+  .faucet-container {
+    margin: 20px !important;
+  }
 
-    .cards {
-      width: 20%;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 10px;
-      margin: 10px;
-      position: relative;
-    }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 
-    .title {
-      font-family: fantasy;
-      font-size: larger;
-    }
+  .cards {
+    width: 20%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-      padding: 0 2rem;
-    }
+  .title {
+    font-family: fantasy;
+    font-size: larger;
+  }
 
-    .articles {
-      word-wrap: break-word;
-    }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 2rem;
+  }
 
-    a.details {
-      padding: 10px;
-      background: #ff9800;
-      border: 1px solid #ff9800;
-      cursor: pointer;
-      color: white;
-      font-weight: 400;
-      text-decoration: none;
-    }
+  .articles {
+    word-wrap: break-word;
+  }
 
-    .button-container {
-      text-align: end;
-      padding: 10px;
-      margin-bottom: 10px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
+  a.details {
+    padding: 10px;
+    background: #ff9800;
+    border: 1px solid #ff9800;
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+  }
 
-    .contents {
-      margin-bottom: 50px;
-    }
+  .button-container {
+    text-align: end;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
-    header {
-      border-bottom: 1px solid #bdbdbd;
-    }
+  .contents {
+    margin-bottom: 50px;
+  }
 
-    h3 {
-      font-size: 2.8rem;
-      line-height: 1.3;
-    }
+  header {
+    border-bottom: 1px solid #bdbdbd;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 300;
-      letter-spacing: -0.1rem;
-      margin-bottom: 2rem;
-      margin-top: 0;
-    }
+  h3 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+  }
 
-    .header-container {
-      margin: 20px !important;
-      max-width: 112rem;
-      padding: 0 2rem;
-      position: relative;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
 
-    .table-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-      padding: 0 2rem;
-    }
+  .header-container {
+    margin: 20px !important;
+    max-width: 112rem;
+    padding: 0 2rem;
+    position: relative;
+  }
 
-    .filter-search {
-      width: 20%;
-      height: calc(1.5em + 0.75rem + 2px);
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
+  .table-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 2rem;
+  }
 
-    .table-header {
-      margin: 10px;
-      width: 100%;
-    }
+  .filter-search {
+    width: 20%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
 
-    span.pagination {
-      border: 1px solid #ced4da;
-      border-radius: 50px;
-      font-size: 1rem;
-      display: unset;
-      margin: 0 2px;
-      width: 20%;
-      height: calc(1.5em + 0.75rem + 2px);
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      cursor: pointer;
-    }
+  .table-header {
+    margin: 10px;
+    width: 100%;
+  }
 
-    span.active {
-      padding: 0.65rem 1rem;
-    }
+  span.pagination {
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    font-size: 1rem;
+    display: unset;
+    margin: 0 2px;
+    width: 20%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+  }
 
-    .pagination-container {
-      display: unset;
-    }
+  span.active {
+    padding: 0.65rem 1rem;
+  }
 
-    #quine {
-      margin: 0px;
-      height: 350px !important;
-      width: 100%;
-    }
+  .pagination-container {
+    display: unset;
+  }
 
-    #keys {
-      margin: 20px !important;
-    }
+  #quine {
+    margin: 0px;
+    height: 350px !important;
+    width: 100%;
+  }
 
-    .private-key-container {
-      font-family: "Amiri", serif !important;
-    }
+  #keys {
+    margin: 20px !important;
+  }
 
-    .keys-container {
-      margin: 20px;
-      justify-content: flex-end;
-      flex-direction: row;
-      align-items: end;
-      display: flex;
-      text-align: end;
-    }
+  .private-key-container {
+    font-family: "Amiri", serif !important;
+  }
 
-    .generate-faucet {
-      margin-right: 25px;
-    }
-  </style>
+  .keys-container {
+    margin: 20px;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: end;
+    display: flex;
+    text-align: end;
+  }
 
-  <body class="body-container">
-    <div>
-      <header class="header">
-        <div class="header-container">
-          <h4>Tezos faucet</h4>
-        </div>
-      </header>
-    </div>
-    <div class="faucet-container">
-      <pre id="quine" class="prettyprint form-control" disabled="true"></pre>
-    </div>
-    <div class="keys-container">
-      <button type="button" class="btn btn-warning" onclick="generateFaucet()">
-        Generate faucet
-      </button>
-    </div>
-    <section id="keys">
-      <div class="input-group mb-3 private-key-container">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon3">private key:</span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          id="private-key"
-          aria-describedby="basic-addon3"
-        />
+  .generate-faucet {
+    margin-right: 25px;
+  }
+
+  #editor {
+    position: relative;
+    height: 70vh;
+    width: 100%
+  }
+</style>
+
+<body class="body-container">
+  <div>
+    <header class="header">
+      <div class="header-container">
+        <h4>Tezos faucet Generator</h4>
       </div>
-    </section>
-  </body>
-  <script src="./eztz.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css"
-    defer
-  ></script>
-  <script>
-      this.faucet = {};
-    function generateFaucet() {
-      this.passphrase = Math.random()
-        .toString(36)
-        .substring(2, 15);
-      this.mnemonics = eztz.crypto.generateMnemonic();
-      this.keys = eztz.crypto.generateKeys(this.mnemonic, this.passphrase);
-      this.faucet.mnemonics = this.mnemonics.split(" ");
-      this.faucet.secret = this.keys.sk;
-      this.faucet.password = this.passphrase;
-      this.faucet.pkh = this.keys.pkh;
-      document.getElementById("quine").innerHTML = "";
-      document.getElementById("quine").innerHTML =
-          `<code>${JSON.stringify(this.faucet)}</code>`;
-      document.getElementById("private-key").value = this.keys.sk;
-    }
-    generateFaucet();
-  </script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"
-  ></script>
+    </header>
+  </div>
+  <div class="keys-container">
+    <button type="button" class="btn btn-warning" onclick="generateFaucet()">
+      Generate faucet
+    </button>
+  </div>
+  <div class="faucet-container">
+    <div id="editor">
+    </div>
+  </div>
+</body>
+<script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./eztz.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css"
+  defer></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+  var editor = ace.edit("editor");
+  editor.getSession().setUseWorker(false);
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/json");
+
+  this.faucet = {};
+  function generateFaucet() {
+    this.passphrase = Math.random()
+      .toString(36)
+      .substring(2, 15);
+    this.mnemonics = eztz.crypto.generateMnemonic();
+    this.keys = eztz.crypto.generateKeys(this.mnemonic, this.passphrase);
+    this.faucet.mnemonics = this.mnemonics.split(" ");
+    this.faucet.secret = this.keys.sk;
+    this.faucet.password = this.passphrase;
+    this.faucet.publicKeyHash = this.keys.pkh;
+    this.faucet.publicKey = this.keys.pk;
+    this.faucet.privateKey = this.keys.sk;
+    editor.setValue(JSON.stringify(this.faucet, undefined, 2));
+
+  }
+  generateFaucet();
+</script>
+
 </html>
